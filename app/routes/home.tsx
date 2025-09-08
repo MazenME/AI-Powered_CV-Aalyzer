@@ -27,7 +27,7 @@ export default function Home() {
             navigate(`/auth?next=${encodeURIComponent(next)}`, {replace: true});
         }
     }, [auth.isAuthenticated, location, navigate]);
-    return <main className="bg-[url('/images/bg-main.svg')] bg-cover">
+    return<main className="bg-[url('/images/bg-main.svg')] bg-cover">
 
         <Navbar/>
         <section className="main-section">
