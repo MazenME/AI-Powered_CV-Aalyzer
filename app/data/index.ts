@@ -182,7 +182,7 @@ export const resumes: Resume[] = [
 ];
 
 export const AIResponseFormat = `
-      interface Feedback {
+interface Feedback {
   overallScore: number; // max 100
   ATS: {
     score: number; // rate based on ATS suitability
@@ -190,6 +190,10 @@ export const AIResponseFormat = `
       type: "good" | "improve";
       tip: string; // short title
       explanation: string; // detailed explanation
+      example?: { // REQUIRED for type === "improve": show bad -> better concrete change
+        bad: string;
+        better: string;
+      };
     }[]; // exactly 3-4 tips
   };
   toneAndStyle: {
@@ -198,6 +202,7 @@ export const AIResponseFormat = `
       type: "good" | "improve";
       tip: string;
       explanation: string;
+      example?: { bad: string; better: string; };
     }[];
   };
   content: {
@@ -206,6 +211,7 @@ export const AIResponseFormat = `
       type: "good" | "improve";
       tip: string;
       explanation: string;
+      example?: { bad: string; better: string; };
     }[];
   };
   structure: {
@@ -214,6 +220,7 @@ export const AIResponseFormat = `
       type: "good" | "improve";
       tip: string;
       explanation: string;
+      example?: { bad: string; better: string; };
     }[];
   };
   skills: {
@@ -222,18 +229,21 @@ export const AIResponseFormat = `
       type: "good" | "improve";
       tip: string;
       explanation: string;
+      example?: { bad: string; better: string; };
     }[];
   };
-  relevance: { // NEW: match with JD
+  relevance: { // match with JD
     score: number;
     tips: {
       type: "good" | "improve";
       tip: string;
       explanation: string;
+      example?: { bad: string; better: string; };
     }[];
   };
 }
 `;
+
 
 export const prepareInstructions = ({
                                         jobTitle,
@@ -255,10 +265,17 @@ The job description is: ${jobDescription}
 - All scores must be integers between 0 and 100.
 - Each section must have exactly 3–4 tips.
 - Each tip must include: "type", "tip", and "explanation".
+- For every tip with type == "improve", you MUST include an "example" object with two fields:
+    - "bad": a short excerpt (1-2 lines) taken from the resume (what to replace).
+    - "better": a concrete improved replacement (what to put instead). Keep examples concise and realistic.
 - Tips must be specific and actionable (avoid vague phrases).
+- Do NOT fabricate facts in examples (do not invent dates, company names, or metrics). Suggest wording changes only.
 - If job description is provided, heavily weigh keyword/skill matching in the "relevance" section.
-- If there is nothing good in a section, still provide 3–4 tips (all as "improve").
-- Do not include any text before or after the JSON (no comments, no introductions).
+- If there is nothing good in a section, still provide 3–4 tips (all as "improve"), each with an example.
+- Do not include any text before or after the JSON (no comments, no introductions). Output must be pure JSON.
+
+JSON format to follow:
+${AIResponseFormat}
 `;
 
 

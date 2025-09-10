@@ -4,9 +4,11 @@ import FileUploader from "~/routes/FileUploader";
 import {usePuterStore} from "~/lib/puter";
 import {convertPdfToImage, generateUUID, safeParseJSON} from "~/utils/utiles";
 import {prepareInstructions} from "~/data";
+import {useNavigate} from "react-router";
 
 const Upload = () => {
-    const {auth,isLoading,fs,ai,kv,error: storeError, clearError} = usePuterStore()
+    const navigate = useNavigate();
+    const {fs,ai,kv,error: storeError, clearError} = usePuterStore()
     const [isProcessing, setIsProcessing] = useState(false);
     const [statusText, setStatusText] = useState("");
     const [file, setFile] = useState<File | null>(null);
@@ -79,8 +81,8 @@ const Upload = () => {
 
             data.feedback = parsedFeedback;
             await kv.set(`resume:${uuid}`, JSON.stringify(data));
-
             setStatusText("Analysis completed successfully, Redirecting...");
+            navigate(`/resume/${uuid}`);
         } catch (error: any) {
             console.error(error);
             setStatusText(`Error: ${error.message}`);
