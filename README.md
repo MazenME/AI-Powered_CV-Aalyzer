@@ -1,87 +1,113 @@
-# Welcome to React Router!
+# HireLens — AI-Powered CV Analyzer
 
-A modern, production-ready template for building full-stack React applications using React Router.
+HireLens is a full‑stack React Router application with puter a Service (BaaS) that scores resumes (CVs) against a target job, provides ATS insights, and suggests concrete improvements. Upload a PDF resume, add the job title/company/description, and get an instant, structured review with an ATS score and actionable feedback.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+> Current local date/time: 2025-09-11 03:38
 
-## Features
+## Key Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- PDF upload with drag & drop, preview, and validation
+- Automatic PDF → image conversion for analysis
+- AI analysis with structured JSON feedback
+- ATS score and section‑by‑section recommendations
+- Resume history persisted locally (view previous analyses)
+- TypeScript, Tailwind CSS, React Router v7, Vite HMR
 
-## Getting Started
+## Tech Stack
 
-### Installation
+- React 19 + React Router 7 (SSR-ready)
+- TypeScript
+- Puter
+- Vite 6
+- Tailwind CSS 4
+- Zustand for state management
 
-Install the dependencies:
+## Project Structure (high level)
 
-```bash
-npm install
-```
+- `app/components/` UI components (Navbar, Summary, Details, etc.)
+- `app/routes/` route files (Home, Upload, Resume view)
+- `app/lib/puter.ts` storage, auth, AI helpers (Zustand store)
+- `public/` static assets (images/icons)
 
-### Development
+## Prerequisites
 
-Start the development server with HMR:
+- Node.js 18+ (recommended LTS) and npm or yarn
+- No external keys required to run locally by default
 
-```bash
-npm run dev
-```
+## Setup
 
-Your application will be available at `http://localhost:5173`.
+1. Install dependencies
+   - npm install
+   - or: yarn install
 
-## Building for Production
+2. Start the dev server
+   - npm run dev
+   - App runs at http://localhost:5173
 
-Create a production build:
+3. Type checking (optional)
+   - npm run typecheck
 
-```bash
-npm run build
-```
+4. Build for production
+   - npm run build
 
-## Deployment
+5. Start production server (after build)
+   - npm start
 
-### Docker Deployment
+## Usage Guide
 
-To build and run using Docker:
+1. Authenticate (automatic/local) and go to Upload
+   - Use the Navbar "Upload CV" button, or navigate to /upload
 
-```bash
-docker build -t my-app .
+2. Fill in job context
+   - Job Title (required)
+   - Company Name (optional)
+   - Job Description (optional, improves accuracy)
 
-# Run the container
-docker run -p 3000:3000 my-app
-```
+3. Upload your resume (PDF)
+   - Drag & drop or click the upload area
+   - The app will convert the first page to an image for analysis
 
-The containerized application can be deployed to any platform that supports Docker, including:
+4. Analyze
+   - Click "Analyze Resume"
+   - You’ll see a processing indicator, then be redirected to `/resume/:id`
 
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
+5. Review results
+   - Summary: key strengths and areas to improve
+   - ATS: score and compatibility insights
+   - Details: section‑level recommendations
 
-### DIY Deployment
+6. View history on Home
+   - Previously analyzed resumes appear on the Home page with quick access
 
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
+## Troubleshooting
 
-Make sure to deploy the output of `npm run build`
+- Upload errors
+  - Ensure the file is a valid PDF and not empty/corrupt.
+- Blank feedback
+  - Re‑run analysis; ensure Job Title is provided.
+- Stuck on loading
+  - Hard refresh the page; stop and restart `npm run dev`.
 
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
+## Scripts
 
-## Styling
+- dev: react-router dev (Vite dev server with HMR)
+- build: react-router build
+- start: react-router-serve ./build/server/index.js
+- typecheck: react-router typegen && tsc
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+## Docker (optional)
 
----
+Build and run locally:
 
-Built with ❤️ using React Router.
+- docker build -t hirelens .
+- docker run -p 3000:3000 hirelens
+
+Then visit http://localhost:3000
+
+## License
+
+MIT — see LICENSE if provided. Otherwise, treat as proprietary for now.
+
+## Acknowledgements
+
+Built with React Router, Vite, and Tailwind CSS.
