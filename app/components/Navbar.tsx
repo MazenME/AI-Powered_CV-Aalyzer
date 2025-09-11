@@ -23,22 +23,22 @@ const Navbar = () => {
                 </Link>
 
             </div>
-                {!isLoading && (
-                    <>
-                        {auth.isAuthenticated ? (
-                            <button
-                                onClick={handleLogout}
-                                className="text-red-500 cursor-pointer w-fit"
-                            >
-                                <p className=" text-[20px] font-semibold text-gradientr">Logout</p>
-                            </button>
-                        ) : (
-                            <Link to="/auth?mode=login" className="secondary-button w-fit">
-                                <p className="sm:text-lg text-[16px] font-semibold">Login</p>
-                            </Link>
-                        )}
-                    </>
-                )}
+                {/*{!isLoading && (*/}
+                {/*    <>*/}
+                {/*        {auth.isAuthenticated ? (*/}
+                {/*            <button*/}
+                {/*                onClick={handleLogout}*/}
+                {/*                className="text-red-500 cursor-pointer w-fit"*/}
+                {/*            >*/}
+                {/*                <p className=" text-[20px] font-semibold text-gradientr">Logout</p>*/}
+                {/*            </button>*/}
+                {/*        ) : (*/}
+                {/*            <Link to="/auth?mode=login" className="secondary-button w-fit">*/}
+                {/*                <p className="sm:text-lg text-[16px] font-semibold">Login</p>*/}
+                {/*            </Link>*/}
+                {/*        )}*/}
+                {/*    </>*/}
+                {/*)}*/}
         </nav>
     );
 };
