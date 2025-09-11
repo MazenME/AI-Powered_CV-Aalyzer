@@ -1,3 +1,9 @@
+import {type ClassValue, clsx} from "clsx";
+import {twMerge} from "tailwind-merge";
+
+
+
+
 export function formatSize(bytes:number):string {
     if (bytes === 0) return "0 Bytes";
 
@@ -168,4 +174,9 @@ export function safeParseJSON(raw: string): any {
     try { return JSON.parse(noTrailingCommas); } catch {}
 
     return null;
+}
+
+
+export function cn(...inputs: ClassValue[]) {
+    return twMerge(clsx(inputs))
 }

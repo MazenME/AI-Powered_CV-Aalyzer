@@ -15,44 +15,59 @@ interface Resume {
 }
 
 interface Feedback {
-    overallScore: number;
+    overallScore: number,
     ATS: {
         score: number;
         tips: {
             type: "good" | "improve";
             tip: string;
+            explanation: string;
+            example?: { bad: string; better: string };
         }[];
-    };
+    },
     toneAndStyle: {
         score: number;
         tips: {
             type: "good" | "improve";
             tip: string;
             explanation: string;
+            example?: { bad: string; better: string };
         }[];
-    };
+    },
     content: {
         score: number;
         tips: {
             type: "good" | "improve";
             tip: string;
             explanation: string;
+            example?: { bad: string; better: string };
         }[];
-    };
+    },
     structure: {
         score: number;
         tips: {
             type: "good" | "improve";
             tip: string;
             explanation: string;
+            example?: { bad: string; better: string };
         }[];
-    };
+    },
     skills: {
         score: number;
         tips: {
             type: "good" | "improve";
             tip: string;
             explanation: string;
+            example?: { bad: string; better: string };
+        }[];
+    },
+    relevance: { // match with JD
+        score: number;
+        tips: {
+            type: "good" | "improve";
+            tip: string;
+            explanation: string;
+            example?: { bad: string; better: string; };
         }[];
     };
 }

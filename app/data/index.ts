@@ -6,28 +6,177 @@ export const resumes: Resume[] = [
         imagePath: "/images/resume_01.png",
         resumePath: "/resumes/resume-1.pdf",
         feedback: {
-            overallScore: 85,
-            ATS: {
-                score: 90,
-                tips: [],
+            "overallScore": 85,
+            "ATS": {
+                "score": 90,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Proper keyword usage",
+                        "explanation": "Your resume includes multiple relevant keywords such as React, JavaScript, and REST APIs which improves ATS ranking."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Optimize file naming",
+                        "explanation": "ATS often ranks resumes higher if the file name contains the candidate’s name and role.",
+                        "example": {
+                            "bad": "resume.pdf",
+                            "better": "John_Doe_Junior_Frontend_Developer.pdf"
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Use consistent date formatting",
+                        "explanation": "Inconsistent date formats can confuse parsing engines.",
+                        "example": {
+                            "bad": "Jan 2022 – Present / 2021-2022",
+                            "better": "Jan 2022 – Present"
+                        }
+                    }
+                ]
             },
-            toneAndStyle: {
-                score: 90,
-                tips: [],
+            "toneAndStyle": {
+                "score": 90,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Professional tone",
+                        "explanation": "The resume avoids casual language and maintains a professional tone throughout."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Reduce passive voice",
+                        "explanation": "Switching from passive to active verbs makes achievements more impactful.",
+                        "example": {
+                            "bad": "Tasks were handled as assigned.",
+                            "better": "Completed assigned tasks efficiently and ahead of deadlines."
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Vary action verbs",
+                        "explanation": "Repetitive use of 'responsible for' reduces readability.",
+                        "example": {
+                            "bad": "Responsible for creating UI, responsible for testing.",
+                            "better": "Created user-friendly UI and tested components for stability."
+                        }
+                    }
+                ]
             },
-            content: {
-                score: 90,
-                tips: [],
+            "content": {
+                "score": 90,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Relevant project inclusion",
+                        "explanation": "You included projects that showcase front-end skills relevant to the job."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Add quantifiable results",
+                        "explanation": "Achievements are listed but lack measurable impact.",
+                        "example": {
+                            "bad": "Improved website speed.",
+                            "better": "Improved website speed by 40% through image optimization and code splitting."
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Expand technical stack",
+                        "explanation": "Consider mentioning testing frameworks or state management libraries.",
+                        "example": {
+                            "bad": "React, JavaScript, CSS",
+                            "better": "React, JavaScript, CSS, Jest, Redux"
+                        }
+                    }
+                ]
             },
-            structure: {
-                score: 90,
-                tips: [],
+            "structure": {
+                "score": 90,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Clear section separation",
+                        "explanation": "The resume uses distinct sections for skills, projects, and work experience."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Improve bullet alignment",
+                        "explanation": "Some bullets are longer than two lines, making readability harder.",
+                        "example": {
+                            "bad": "Developed and maintained the company website which involved collaborating with cross-functional teams, optimizing code, and ensuring accessibility compliance.",
+                            "better": "Developed and maintained company website, optimized code, and ensured accessibility compliance."
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Consistent font size",
+                        "explanation": "Headers and body text have slight inconsistencies in font sizing.",
+                        "example": {
+                            "bad": "Experience (14pt), Skills (12pt)",
+                            "better": "Experience (14pt), Skills (14pt)"
+                        }
+                    }
+                ]
             },
-            skills: {
-                score: 90,
-                tips: [],
+            "skills": {
+                "score": 90,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Strong technical skills listed",
+                        "explanation": "The skills section includes core technologies like React, HTML, CSS, and JavaScript."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Organize skills into categories",
+                        "explanation": "Grouping skills improves readability and ATS scanning.",
+                        "example": {
+                            "bad": "React, HTML, CSS, Git, Figma, Node.js",
+                            "better": "Frontend: React, HTML, CSS | Tools: Git, Figma | Backend: Node.js"
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Add proficiency levels",
+                        "explanation": "Indicating familiarity levels gives recruiters clarity.",
+                        "example": {
+                            "bad": "JavaScript, TypeScript",
+                            "better": "JavaScript (Advanced), TypeScript (Intermediate)"
+                        }
+                    }
+                ]
             },
-        },
+            "relevance": {
+                "score": 85,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Projects match JD",
+                        "explanation": "The resume highlights projects that align with the responsibilities of a Junior Front-End Developer."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Add more job-specific keywords",
+                        "explanation": "The job description emphasizes testing and accessibility, which are not explicitly mentioned.",
+                        "example": {
+                            "bad": "Built responsive UI with React.",
+                            "better": "Built responsive UI with React while ensuring WCAG 2.1 accessibility compliance."
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Highlight collaboration skills",
+                        "explanation": "The job mentions teamwork, but the resume lacks strong evidence of collaboration.",
+                        "example": {
+                            "bad": "Developed components in React.",
+                            "better": "Collaborated with 3 developers to build and integrate React components into a large-scale project."
+                        }
+                    }
+                ]
+            }
+        }
+
     },
     {
         id: "2",
@@ -36,29 +185,179 @@ export const resumes: Resume[] = [
         imagePath: "/images/resume_02.png",
         resumePath: "/resumes/resume-2.pdf",
         feedback: {
-            overallScore: 55,
-            ATS: {
-                score: 90,
-                tips: [],
+            "overallScore": 85,
+            "ATS": {
+                "score": 90,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Proper keyword usage",
+                        "explanation": "Your resume includes multiple relevant keywords such as React, JavaScript, and REST APIs which improves ATS ranking."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Optimize file naming",
+                        "explanation": "ATS often ranks resumes higher if the file name contains the candidate’s name and role.",
+                        "example": {
+                            "bad": "resume.pdf",
+                            "better": "John_Doe_Junior_Frontend_Developer.pdf"
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Use consistent date formatting",
+                        "explanation": "Inconsistent date formats can confuse parsing engines.",
+                        "example": {
+                            "bad": "Jan 2022 – Present / 2021-2022",
+                            "better": "Jan 2022 – Present"
+                        }
+                    }
+                ]
             },
-            toneAndStyle: {
-                score: 90,
-                tips: [],
+            "toneAndStyle": {
+                "score": 90,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Professional tone",
+                        "explanation": "The resume avoids casual language and maintains a professional tone throughout."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Reduce passive voice",
+                        "explanation": "Switching from passive to active verbs makes achievements more impactful.",
+                        "example": {
+                            "bad": "Tasks were handled as assigned.",
+                            "better": "Completed assigned tasks efficiently and ahead of deadlines."
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Vary action verbs",
+                        "explanation": "Repetitive use of 'responsible for' reduces readability.",
+                        "example": {
+                            "bad": "Responsible for creating UI, responsible for testing.",
+                            "better": "Created user-friendly UI and tested components for stability."
+                        }
+                    }
+                ]
             },
-            content: {
-                score: 90,
-                tips: [],
+            "content": {
+                "score": 90,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Relevant project inclusion",
+                        "explanation": "You included projects that showcase front-end skills relevant to the job."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Add quantifiable results",
+                        "explanation": "Achievements are listed but lack measurable impact.",
+                        "example": {
+                            "bad": "Improved website speed.",
+                            "better": "Improved website speed by 40% through image optimization and code splitting."
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Expand technical stack",
+                        "explanation": "Consider mentioning testing frameworks or state management libraries.",
+                        "example": {
+                            "bad": "React, JavaScript, CSS",
+                            "better": "React, JavaScript, CSS, Jest, Redux"
+                        }
+                    }
+                ]
             },
-            structure: {
-                score: 90,
-                tips: [],
+            "structure": {
+                "score": 90,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Clear section separation",
+                        "explanation": "The resume uses distinct sections for skills, projects, and work experience."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Improve bullet alignment",
+                        "explanation": "Some bullets are longer than two lines, making readability harder.",
+                        "example": {
+                            "bad": "Developed and maintained the company website which involved collaborating with cross-functional teams, optimizing code, and ensuring accessibility compliance.",
+                            "better": "Developed and maintained company website, optimized code, and ensured accessibility compliance."
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Consistent font size",
+                        "explanation": "Headers and body text have slight inconsistencies in font sizing.",
+                        "example": {
+                            "bad": "Experience (14pt), Skills (12pt)",
+                            "better": "Experience (14pt), Skills (14pt)"
+                        }
+                    }
+                ]
             },
-            skills: {
-                score: 90,
-                tips: [],
+            "skills": {
+                "score": 90,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Strong technical skills listed",
+                        "explanation": "The skills section includes core technologies like React, HTML, CSS, and JavaScript."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Organize skills into categories",
+                        "explanation": "Grouping skills improves readability and ATS scanning.",
+                        "example": {
+                            "bad": "React, HTML, CSS, Git, Figma, Node.js",
+                            "better": "Frontend: React, HTML, CSS | Tools: Git, Figma | Backend: Node.js"
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Add proficiency levels",
+                        "explanation": "Indicating familiarity levels gives recruiters clarity.",
+                        "example": {
+                            "bad": "JavaScript, TypeScript",
+                            "better": "JavaScript (Advanced), TypeScript (Intermediate)"
+                        }
+                    }
+                ]
             },
-        },
+            "relevance": {
+                "score": 85,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Projects match JD",
+                        "explanation": "The resume highlights projects that align with the responsibilities of a Junior Front-End Developer."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Add more job-specific keywords",
+                        "explanation": "The job description emphasizes testing and accessibility, which are not explicitly mentioned.",
+                        "example": {
+                            "bad": "Built responsive UI with React.",
+                            "better": "Built responsive UI with React while ensuring WCAG 2.1 accessibility compliance."
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Highlight collaboration skills",
+                        "explanation": "The job mentions teamwork, but the resume lacks strong evidence of collaboration.",
+                        "example": {
+                            "bad": "Developed components in React.",
+                            "better": "Collaborated with 3 developers to build and integrate React components into a large-scale project."
+                        }
+                    }
+                ]
+            }
+        }
+
     },
+
     {
         id: "3",
         companyName: "Apple",
@@ -66,29 +365,179 @@ export const resumes: Resume[] = [
         imagePath: "/images/resume_03.png",
         resumePath: "/resumes/resume-3.pdf",
         feedback: {
-            overallScore: 75,
-            ATS: {
-                score: 90,
-                tips: [],
+            "overallScore": 85,
+            "ATS": {
+                "score": 90,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Proper keyword usage",
+                        "explanation": "Your resume includes multiple relevant keywords such as React, JavaScript, and REST APIs which improves ATS ranking."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Optimize file naming",
+                        "explanation": "ATS often ranks resumes higher if the file name contains the candidate’s name and role.",
+                        "example": {
+                            "bad": "resume.pdf",
+                            "better": "John_Doe_Junior_Frontend_Developer.pdf"
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Use consistent date formatting",
+                        "explanation": "Inconsistent date formats can confuse parsing engines.",
+                        "example": {
+                            "bad": "Jan 2022 – Present / 2021-2022",
+                            "better": "Jan 2022 – Present"
+                        }
+                    }
+                ]
             },
-            toneAndStyle: {
-                score: 90,
-                tips: [],
+            "toneAndStyle": {
+                "score": 90,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Professional tone",
+                        "explanation": "The resume avoids casual language and maintains a professional tone throughout."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Reduce passive voice",
+                        "explanation": "Switching from passive to active verbs makes achievements more impactful.",
+                        "example": {
+                            "bad": "Tasks were handled as assigned.",
+                            "better": "Completed assigned tasks efficiently and ahead of deadlines."
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Vary action verbs",
+                        "explanation": "Repetitive use of 'responsible for' reduces readability.",
+                        "example": {
+                            "bad": "Responsible for creating UI, responsible for testing.",
+                            "better": "Created user-friendly UI and tested components for stability."
+                        }
+                    }
+                ]
             },
-            content: {
-                score: 90,
-                tips: [],
+            "content": {
+                "score": 90,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Relevant project inclusion",
+                        "explanation": "You included projects that showcase front-end skills relevant to the job."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Add quantifiable results",
+                        "explanation": "Achievements are listed but lack measurable impact.",
+                        "example": {
+                            "bad": "Improved website speed.",
+                            "better": "Improved website speed by 40% through image optimization and code splitting."
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Expand technical stack",
+                        "explanation": "Consider mentioning testing frameworks or state management libraries.",
+                        "example": {
+                            "bad": "React, JavaScript, CSS",
+                            "better": "React, JavaScript, CSS, Jest, Redux"
+                        }
+                    }
+                ]
             },
-            structure: {
-                score: 90,
-                tips: [],
+            "structure": {
+                "score": 90,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Clear section separation",
+                        "explanation": "The resume uses distinct sections for skills, projects, and work experience."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Improve bullet alignment",
+                        "explanation": "Some bullets are longer than two lines, making readability harder.",
+                        "example": {
+                            "bad": "Developed and maintained the company website which involved collaborating with cross-functional teams, optimizing code, and ensuring accessibility compliance.",
+                            "better": "Developed and maintained company website, optimized code, and ensured accessibility compliance."
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Consistent font size",
+                        "explanation": "Headers and body text have slight inconsistencies in font sizing.",
+                        "example": {
+                            "bad": "Experience (14pt), Skills (12pt)",
+                            "better": "Experience (14pt), Skills (14pt)"
+                        }
+                    }
+                ]
             },
-            skills: {
-                score: 90,
-                tips: [],
+            "skills": {
+                "score": 90,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Strong technical skills listed",
+                        "explanation": "The skills section includes core technologies like React, HTML, CSS, and JavaScript."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Organize skills into categories",
+                        "explanation": "Grouping skills improves readability and ATS scanning.",
+                        "example": {
+                            "bad": "React, HTML, CSS, Git, Figma, Node.js",
+                            "better": "Frontend: React, HTML, CSS | Tools: Git, Figma | Backend: Node.js"
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Add proficiency levels",
+                        "explanation": "Indicating familiarity levels gives recruiters clarity.",
+                        "example": {
+                            "bad": "JavaScript, TypeScript",
+                            "better": "JavaScript (Advanced), TypeScript (Intermediate)"
+                        }
+                    }
+                ]
             },
-        },
+            "relevance": {
+                "score": 85,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Projects match JD",
+                        "explanation": "The resume highlights projects that align with the responsibilities of a Junior Front-End Developer."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Add more job-specific keywords",
+                        "explanation": "The job description emphasizes testing and accessibility, which are not explicitly mentioned.",
+                        "example": {
+                            "bad": "Built responsive UI with React.",
+                            "better": "Built responsive UI with React while ensuring WCAG 2.1 accessibility compliance."
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Highlight collaboration skills",
+                        "explanation": "The job mentions teamwork, but the resume lacks strong evidence of collaboration.",
+                        "example": {
+                            "bad": "Developed components in React.",
+                            "better": "Collaborated with 3 developers to build and integrate React components into a large-scale project."
+                        }
+                    }
+                ]
+            }
+        }
+
     },
+
     {
         id: "4",
         companyName: "Microsoft",
@@ -96,29 +545,179 @@ export const resumes: Resume[] = [
         imagePath: "/images/resume_02.png",
         resumePath: "/resumes/resume-2.pdf",
         feedback: {
-            overallScore: 55,
-            ATS: {
-                score: 90,
-                tips: [],
+            "overallScore": 85,
+            "ATS": {
+                "score": 90,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Proper keyword usage",
+                        "explanation": "Your resume includes multiple relevant keywords such as React, JavaScript, and REST APIs which improves ATS ranking."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Optimize file naming",
+                        "explanation": "ATS often ranks resumes higher if the file name contains the candidate’s name and role.",
+                        "example": {
+                            "bad": "resume.pdf",
+                            "better": "John_Doe_Junior_Frontend_Developer.pdf"
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Use consistent date formatting",
+                        "explanation": "Inconsistent date formats can confuse parsing engines.",
+                        "example": {
+                            "bad": "Jan 2022 – Present / 2021-2022",
+                            "better": "Jan 2022 – Present"
+                        }
+                    }
+                ]
             },
-            toneAndStyle: {
-                score: 90,
-                tips: [],
+            "toneAndStyle": {
+                "score": 90,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Professional tone",
+                        "explanation": "The resume avoids casual language and maintains a professional tone throughout."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Reduce passive voice",
+                        "explanation": "Switching from passive to active verbs makes achievements more impactful.",
+                        "example": {
+                            "bad": "Tasks were handled as assigned.",
+                            "better": "Completed assigned tasks efficiently and ahead of deadlines."
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Vary action verbs",
+                        "explanation": "Repetitive use of 'responsible for' reduces readability.",
+                        "example": {
+                            "bad": "Responsible for creating UI, responsible for testing.",
+                            "better": "Created user-friendly UI and tested components for stability."
+                        }
+                    }
+                ]
             },
-            content: {
-                score: 90,
-                tips: [],
+            "content": {
+                "score": 90,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Relevant project inclusion",
+                        "explanation": "You included projects that showcase front-end skills relevant to the job."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Add quantifiable results",
+                        "explanation": "Achievements are listed but lack measurable impact.",
+                        "example": {
+                            "bad": "Improved website speed.",
+                            "better": "Improved website speed by 40% through image optimization and code splitting."
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Expand technical stack",
+                        "explanation": "Consider mentioning testing frameworks or state management libraries.",
+                        "example": {
+                            "bad": "React, JavaScript, CSS",
+                            "better": "React, JavaScript, CSS, Jest, Redux"
+                        }
+                    }
+                ]
             },
-            structure: {
-                score: 90,
-                tips: [],
+            "structure": {
+                "score": 90,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Clear section separation",
+                        "explanation": "The resume uses distinct sections for skills, projects, and work experience."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Improve bullet alignment",
+                        "explanation": "Some bullets are longer than two lines, making readability harder.",
+                        "example": {
+                            "bad": "Developed and maintained the company website which involved collaborating with cross-functional teams, optimizing code, and ensuring accessibility compliance.",
+                            "better": "Developed and maintained company website, optimized code, and ensured accessibility compliance."
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Consistent font size",
+                        "explanation": "Headers and body text have slight inconsistencies in font sizing.",
+                        "example": {
+                            "bad": "Experience (14pt), Skills (12pt)",
+                            "better": "Experience (14pt), Skills (14pt)"
+                        }
+                    }
+                ]
             },
-            skills: {
-                score: 90,
-                tips: [],
+            "skills": {
+                "score": 90,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Strong technical skills listed",
+                        "explanation": "The skills section includes core technologies like React, HTML, CSS, and JavaScript."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Organize skills into categories",
+                        "explanation": "Grouping skills improves readability and ATS scanning.",
+                        "example": {
+                            "bad": "React, HTML, CSS, Git, Figma, Node.js",
+                            "better": "Frontend: React, HTML, CSS | Tools: Git, Figma | Backend: Node.js"
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Add proficiency levels",
+                        "explanation": "Indicating familiarity levels gives recruiters clarity.",
+                        "example": {
+                            "bad": "JavaScript, TypeScript",
+                            "better": "JavaScript (Advanced), TypeScript (Intermediate)"
+                        }
+                    }
+                ]
             },
-        },
+            "relevance": {
+                "score": 85,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Projects match JD",
+                        "explanation": "The resume highlights projects that align with the responsibilities of a Junior Front-End Developer."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Add more job-specific keywords",
+                        "explanation": "The job description emphasizes testing and accessibility, which are not explicitly mentioned.",
+                        "example": {
+                            "bad": "Built responsive UI with React.",
+                            "better": "Built responsive UI with React while ensuring WCAG 2.1 accessibility compliance."
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Highlight collaboration skills",
+                        "explanation": "The job mentions teamwork, but the resume lacks strong evidence of collaboration.",
+                        "example": {
+                            "bad": "Developed components in React.",
+                            "better": "Collaborated with 3 developers to build and integrate React components into a large-scale project."
+                        }
+                    }
+                ]
+            }
+        }
+
     },
+
     {
         id: "5",
         companyName: "Apple",
@@ -126,29 +725,179 @@ export const resumes: Resume[] = [
         imagePath: "/images/resume_03.png",
         resumePath: "/resumes/resume-3.pdf",
         feedback: {
-            overallScore: 75,
-            ATS: {
-                score: 90,
-                tips: [],
+            "overallScore": 85,
+            "ATS": {
+                "score": 90,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Proper keyword usage",
+                        "explanation": "Your resume includes multiple relevant keywords such as React, JavaScript, and REST APIs which improves ATS ranking."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Optimize file naming",
+                        "explanation": "ATS often ranks resumes higher if the file name contains the candidate’s name and role.",
+                        "example": {
+                            "bad": "resume.pdf",
+                            "better": "John_Doe_Junior_Frontend_Developer.pdf"
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Use consistent date formatting",
+                        "explanation": "Inconsistent date formats can confuse parsing engines.",
+                        "example": {
+                            "bad": "Jan 2022 – Present / 2021-2022",
+                            "better": "Jan 2022 – Present"
+                        }
+                    }
+                ]
             },
-            toneAndStyle: {
-                score: 90,
-                tips: [],
+            "toneAndStyle": {
+                "score": 90,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Professional tone",
+                        "explanation": "The resume avoids casual language and maintains a professional tone throughout."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Reduce passive voice",
+                        "explanation": "Switching from passive to active verbs makes achievements more impactful.",
+                        "example": {
+                            "bad": "Tasks were handled as assigned.",
+                            "better": "Completed assigned tasks efficiently and ahead of deadlines."
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Vary action verbs",
+                        "explanation": "Repetitive use of 'responsible for' reduces readability.",
+                        "example": {
+                            "bad": "Responsible for creating UI, responsible for testing.",
+                            "better": "Created user-friendly UI and tested components for stability."
+                        }
+                    }
+                ]
             },
-            content: {
-                score: 90,
-                tips: [],
+            "content": {
+                "score": 90,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Relevant project inclusion",
+                        "explanation": "You included projects that showcase front-end skills relevant to the job."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Add quantifiable results",
+                        "explanation": "Achievements are listed but lack measurable impact.",
+                        "example": {
+                            "bad": "Improved website speed.",
+                            "better": "Improved website speed by 40% through image optimization and code splitting."
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Expand technical stack",
+                        "explanation": "Consider mentioning testing frameworks or state management libraries.",
+                        "example": {
+                            "bad": "React, JavaScript, CSS",
+                            "better": "React, JavaScript, CSS, Jest, Redux"
+                        }
+                    }
+                ]
             },
-            structure: {
-                score: 90,
-                tips: [],
+            "structure": {
+                "score": 90,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Clear section separation",
+                        "explanation": "The resume uses distinct sections for skills, projects, and work experience."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Improve bullet alignment",
+                        "explanation": "Some bullets are longer than two lines, making readability harder.",
+                        "example": {
+                            "bad": "Developed and maintained the company website which involved collaborating with cross-functional teams, optimizing code, and ensuring accessibility compliance.",
+                            "better": "Developed and maintained company website, optimized code, and ensured accessibility compliance."
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Consistent font size",
+                        "explanation": "Headers and body text have slight inconsistencies in font sizing.",
+                        "example": {
+                            "bad": "Experience (14pt), Skills (12pt)",
+                            "better": "Experience (14pt), Skills (14pt)"
+                        }
+                    }
+                ]
             },
-            skills: {
-                score: 90,
-                tips: [],
+            "skills": {
+                "score": 90,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Strong technical skills listed",
+                        "explanation": "The skills section includes core technologies like React, HTML, CSS, and JavaScript."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Organize skills into categories",
+                        "explanation": "Grouping skills improves readability and ATS scanning.",
+                        "example": {
+                            "bad": "React, HTML, CSS, Git, Figma, Node.js",
+                            "better": "Frontend: React, HTML, CSS | Tools: Git, Figma | Backend: Node.js"
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Add proficiency levels",
+                        "explanation": "Indicating familiarity levels gives recruiters clarity.",
+                        "example": {
+                            "bad": "JavaScript, TypeScript",
+                            "better": "JavaScript (Advanced), TypeScript (Intermediate)"
+                        }
+                    }
+                ]
             },
-        },
+            "relevance": {
+                "score": 85,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Projects match JD",
+                        "explanation": "The resume highlights projects that align with the responsibilities of a Junior Front-End Developer."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Add more job-specific keywords",
+                        "explanation": "The job description emphasizes testing and accessibility, which are not explicitly mentioned.",
+                        "example": {
+                            "bad": "Built responsive UI with React.",
+                            "better": "Built responsive UI with React while ensuring WCAG 2.1 accessibility compliance."
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Highlight collaboration skills",
+                        "explanation": "The job mentions teamwork, but the resume lacks strong evidence of collaboration.",
+                        "example": {
+                            "bad": "Developed components in React.",
+                            "better": "Collaborated with 3 developers to build and integrate React components into a large-scale project."
+                        }
+                    }
+                ]
+            }
+        }
+
     },
+
     {
         id: "6",
         companyName: "Google",
@@ -156,29 +905,179 @@ export const resumes: Resume[] = [
         imagePath: "/images/resume_01.png",
         resumePath: "/resumes/resume-1.pdf",
         feedback: {
-            overallScore: 85,
-            ATS: {
-                score: 90,
-                tips: [],
+            "overallScore": 85,
+            "ATS": {
+                "score": 90,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Proper keyword usage",
+                        "explanation": "Your resume includes multiple relevant keywords such as React, JavaScript, and REST APIs which improves ATS ranking."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Optimize file naming",
+                        "explanation": "ATS often ranks resumes higher if the file name contains the candidate’s name and role.",
+                        "example": {
+                            "bad": "resume.pdf",
+                            "better": "John_Doe_Junior_Frontend_Developer.pdf"
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Use consistent date formatting",
+                        "explanation": "Inconsistent date formats can confuse parsing engines.",
+                        "example": {
+                            "bad": "Jan 2022 – Present / 2021-2022",
+                            "better": "Jan 2022 – Present"
+                        }
+                    }
+                ]
             },
-            toneAndStyle: {
-                score: 90,
-                tips: [],
+            "toneAndStyle": {
+                "score": 90,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Professional tone",
+                        "explanation": "The resume avoids casual language and maintains a professional tone throughout."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Reduce passive voice",
+                        "explanation": "Switching from passive to active verbs makes achievements more impactful.",
+                        "example": {
+                            "bad": "Tasks were handled as assigned.",
+                            "better": "Completed assigned tasks efficiently and ahead of deadlines."
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Vary action verbs",
+                        "explanation": "Repetitive use of 'responsible for' reduces readability.",
+                        "example": {
+                            "bad": "Responsible for creating UI, responsible for testing.",
+                            "better": "Created user-friendly UI and tested components for stability."
+                        }
+                    }
+                ]
             },
-            content: {
-                score: 90,
-                tips: [],
+            "content": {
+                "score": 90,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Relevant project inclusion",
+                        "explanation": "You included projects that showcase front-end skills relevant to the job."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Add quantifiable results",
+                        "explanation": "Achievements are listed but lack measurable impact.",
+                        "example": {
+                            "bad": "Improved website speed.",
+                            "better": "Improved website speed by 40% through image optimization and code splitting."
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Expand technical stack",
+                        "explanation": "Consider mentioning testing frameworks or state management libraries.",
+                        "example": {
+                            "bad": "React, JavaScript, CSS",
+                            "better": "React, JavaScript, CSS, Jest, Redux"
+                        }
+                    }
+                ]
             },
-            structure: {
-                score: 90,
-                tips: [],
+            "structure": {
+                "score": 90,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Clear section separation",
+                        "explanation": "The resume uses distinct sections for skills, projects, and work experience."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Improve bullet alignment",
+                        "explanation": "Some bullets are longer than two lines, making readability harder.",
+                        "example": {
+                            "bad": "Developed and maintained the company website which involved collaborating with cross-functional teams, optimizing code, and ensuring accessibility compliance.",
+                            "better": "Developed and maintained company website, optimized code, and ensured accessibility compliance."
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Consistent font size",
+                        "explanation": "Headers and body text have slight inconsistencies in font sizing.",
+                        "example": {
+                            "bad": "Experience (14pt), Skills (12pt)",
+                            "better": "Experience (14pt), Skills (14pt)"
+                        }
+                    }
+                ]
             },
-            skills: {
-                score: 90,
-                tips: [],
+            "skills": {
+                "score": 90,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Strong technical skills listed",
+                        "explanation": "The skills section includes core technologies like React, HTML, CSS, and JavaScript."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Organize skills into categories",
+                        "explanation": "Grouping skills improves readability and ATS scanning.",
+                        "example": {
+                            "bad": "React, HTML, CSS, Git, Figma, Node.js",
+                            "better": "Frontend: React, HTML, CSS | Tools: Git, Figma | Backend: Node.js"
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Add proficiency levels",
+                        "explanation": "Indicating familiarity levels gives recruiters clarity.",
+                        "example": {
+                            "bad": "JavaScript, TypeScript",
+                            "better": "JavaScript (Advanced), TypeScript (Intermediate)"
+                        }
+                    }
+                ]
             },
-        },
+            "relevance": {
+                "score": 85,
+                "tips": [
+                    {
+                        "type": "good",
+                        "tip": "Projects match JD",
+                        "explanation": "The resume highlights projects that align with the responsibilities of a Junior Front-End Developer."
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Add more job-specific keywords",
+                        "explanation": "The job description emphasizes testing and accessibility, which are not explicitly mentioned.",
+                        "example": {
+                            "bad": "Built responsive UI with React.",
+                            "better": "Built responsive UI with React while ensuring WCAG 2.1 accessibility compliance."
+                        }
+                    },
+                    {
+                        "type": "improve",
+                        "tip": "Highlight collaboration skills",
+                        "explanation": "The job mentions teamwork, but the resume lacks strong evidence of collaboration.",
+                        "example": {
+                            "bad": "Developed components in React.",
+                            "better": "Collaborated with 3 developers to build and integrate React components into a large-scale project."
+                        }
+                    }
+                ]
+            }
+        }
+
     },
+
 ];
 
 export const AIResponseFormat = `

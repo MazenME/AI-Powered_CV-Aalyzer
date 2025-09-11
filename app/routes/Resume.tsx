@@ -88,7 +88,7 @@ const Resume = () => {
                             className='animate-in fade-in duration-1000 gradient-border max-sm:m-0 h-[90%]  w-fit'>
                             <a className='cursor-pointer' href={resumeUrl} target='_blank' rel='noopener noreferrer'>
                                 <img title='resume' src={imageUrl} alt='Resume'
-                                     className='w-full h-full object-contain rounded-2xl shadow-xl'/>
+                                     className='w-full h-full object-contain rounded-2xl shadow-md'/>
                             </a>
                         </div>
                     )}
